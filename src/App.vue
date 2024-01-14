@@ -1,9 +1,3 @@
-<!-- Las etiquetas <script>, <template> y <style> se les conoce como Single File Components (SFA)
-      * scripts: Logica de desarrollo.
-      * template: HTML que se mostrara en pantalla.
-      * style: CSS/Sass que tendra el componente.
--->
-
 <script setup>
   
 </script>

@@ -25,3 +25,49 @@ Options API está disponible desde Vue.js 2 mientras que Composition API desde l
     * Composition API tiene 2 funciones para reactividad: reactive y ref.
 
 Este curso utilizará Composition API ya que es más nuevo, se adapta mejor a la reutilización de código y es el que recomienda el equipo de Vue.
+
+## ¿Qué es el State en Vue.js? - Diferencias entre ref y reactive
+El state (o estado) determina la situación actual de nuestra aplicación. Si un carrito de compras esta lleno o vacío, si un cliente aceptó un viaje o no, si un usuario esta autenticado o no, son ejemplos del estado de nuestra aplicación. 
+
+El State (o estado) no es siempre igual; tiende a cambiar en base a las interacciones del usuario (clicks, formularios, navegar en diferentes páginas, etc).
+
+Debido a que el State tiende a cambiar, Vue.js tiene un par de funciones que nos permitirán declararlo y sobretodo identificar cuando el state ha cambido. Estas 2 funciones son (ambas se importan de Vue) y solo estan disponibles en Composition API:
+
+
+* Reactive: Reactive siempre es un objeto y para acceder a las propiedades es con un punto (.). Reactive es un objeto, que lo hace ideal cuando quieres agrupar datos, ¿Pero qué pasa con los arrays, booleans o string?, para ello utilizamos Ref que nos permite trabajar con estos tipos de datos.
+```JS
+import {reactive} from 'vue';
+
+const libro = reactive({
+    disponible: true,
+    nombre: 'Algoritmos 3',
+    precio: 349,
+    ISBN: "0-7645-2641-3"
+})
+
+// Reescribir una propiedades
+libro.disponible = false;
+
+// Acceder a las propiedades
+console.log(libro.disponible) // false
+```
+
+* Ref: Cuando declaras un Ref deberás colocar un valor inicial.
+```JS
+import {ref} from 'vue';
+
+const cliente = ref([]);
+const libro = ref({});
+const auth = ref(false);
+const mensaje = ref('Hola');
+
+// Reescribir una propiedad
+clientes.value.push(nuevoCliente);
+auth.value = true;
+mensaje.value = 'NuevoTexto';
+
+// Acceder a las propiedades, veamos que seguido del nombre de la propiedad debemos colocar .value
+console.log(clientes.value) // Proxy.
+console.log(auth.value) // False.
+console.log(mensaje.value) // 'Hola'.
+```

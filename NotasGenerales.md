@@ -56,7 +56,7 @@ console.log(libro.disponible) // false
 ```JS
 import {ref} from 'vue';
 
-const cliente = ref([]);
+const clientes = ref([]);
 const libro = ref({});
 const auth = ref(false);
 const mensaje = ref('Hola');

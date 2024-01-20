@@ -71,3 +71,27 @@ console.log(clientes.value) // Proxy.
 console.log(auth.value) // False.
 console.log(mensaje.value) // 'Hola'.
 ```
+
+## Iterando sobre el State y que son las Directivas en Vue.js
+Las directivas en Vue JS son básicamente atributos HTML con cierta funcionalidad de JavaScript. Influenciadas por AngularJS, las directivas de Vue.js es lo que llevan a este framework a un nuevo nivel.
+
+Las directivas en Vue.js siempre inician con "v-" y se colocan como atributos HTML.
+
+El listado de directivas disponibles son:
+```VUE
+v-text
+v-html
+v-show
+v-if
+v-else
+v-else-if
+v-for
+v-on
+v-bind
+v-model
+v-slot
+v-pre
+v-once
+v-memo
+v-cloak
+```

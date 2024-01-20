@@ -95,3 +95,11 @@ v-once
 v-memo
 v-cloak
 ```
+
+
+## Creando un Componente en Vue.js y pasando datos con Props
+Vue.js utiliza Props para pasar información entre componentes; estos props pueden ser datos estáticos o reactivos. En caso de querer pasar funciones se recomienda que sea por medio de un Component Event.
+
+Los Props nunca deben modificar el state en el componente hijo.
+
+* Props: https://vuejs.org/guide/components/props.html#props

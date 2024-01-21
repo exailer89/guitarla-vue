@@ -8,6 +8,10 @@
     onMounted(() => {
         guitarras.value = db;
     });
+
+    const incrementar = () => {
+        alert('Diste Click');
+    }
 </script>
 
 <template>

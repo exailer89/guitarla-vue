@@ -96,10 +96,19 @@ v-memo
 v-cloak
 ```
 
-
 ## Creando un Componente en Vue.js y pasando datos con Props
 Vue.js utiliza Props para pasar información entre componentes; estos props pueden ser datos estáticos o reactivos. En caso de querer pasar funciones se recomienda que sea por medio de un Component Event.
 
 Los Props nunca deben modificar el state en el componente hijo.
 
 * Props: https://vuejs.org/guide/components/props.html#props
+
+
+## Finalizando el Componente de Guitarra, atributos dinamicos y más
+En Vue, cuando agregas dos puntos (:) a un atributo de HTML lo haces dinamico, ejemplo seria el de la imagen de guitarra del componente Guitarra.vie:
+
+```HTML
+<div class="col-4">
+    <img class="img-fluid" :src="'/img/' + guitarra.imagen + '.jpg'" :alt="'imagen guitarra' + guitarra.nombre">
+</div>
+```

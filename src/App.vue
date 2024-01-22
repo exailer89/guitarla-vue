@@ -9,8 +9,8 @@
         guitarras.value = db;
     });
 
-    const incrementar = () => {
-        alert('Diste Click');
+    const agregarCarrito = () => {
+        console.log('Agregando...');
     }
 </script>
 
@@ -105,7 +105,8 @@
         <div class="row mt-5">
             <Guitarra 
                 v-for="guitarra in guitarras" 
-                v-bind:guitarra="guitarra"
+                :guitarra="guitarra"
+                @agregar-carrito="agregarCarrito"
             />
         </div>
     </main>

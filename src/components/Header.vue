@@ -57,7 +57,7 @@
                                                 <button
                                                     type="button"
                                                     class="btn btn-dark"
-                                                    @click="$emit('decrementar-cantidad')"
+                                                    @click="$emit('decrementar-cantidad', producto.id)"
                                                 >
                                                     -
                                                 </button>
@@ -65,7 +65,7 @@
                                                 <button
                                                     type="button"
                                                     class="btn btn-dark"
-                                                    @click="$emit('incrementar-cantidad')"
+                                                    @click="$emit('incrementar-cantidad', producto.id)"
                                                 >
                                                     +
                                                 </button>

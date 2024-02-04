@@ -23,11 +23,21 @@
             carrito.value.push(guitarra);
         }
     }
+
+    const decrementarCantidad = () => {
+        console.log('Menos...');
+    }
+
+    const incrementarCantida = () => {
+        console.log('Mas...');
+    }
 </script>
 
 <template>
     <Header 
         :carrito="carrito"
+        @decrementar-cantidad="decrementarCantidad"
+        @incrementar-cantidad="incrementarCantida"
     />
 
     <main class="container-xl mt-5">
